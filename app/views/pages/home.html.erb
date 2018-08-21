@@ -1,1 +1,37 @@
 <h1>hey</h1>
+
+
+<form>
+  <div class="form-group">
+    <label for="customRange2">Nombre de personne</label>
+    <input type="range" class="custom-range" min="1" max="5" value="1" id="peopleRange">
+    <p id="value" >valeur : </p>
+  </div>
+</form>
+
+
+<script>
+  function defaultValue (id) {
+    const inputRange = document.getElementById(id);
+    let value = inputRange.value;
+    const valueHTML = document.getElementById("value");
+    valueHTML.innerHTML = `Valeur : ${value}`;
+  }
+
+  function valueForm (element){
+    let value = element.value;
+    const valueHTML = document.getElementById("value");
+    valueHTML.innerHTML = `Valeur : ${value}`;
+  }
+  function rangeEvent(id) {
+    const inputRange = document.getElementById(id);
+    inputRange.addEventListener("input", (event) => {
+      valueForm (inputRange);
+   });
+  }
+  window.onload = function(){
+    defaultValue('peopleRange');
+    rangeEvent('peopleRange');
+  };
+
+</script>

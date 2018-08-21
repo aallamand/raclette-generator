@@ -7,7 +7,7 @@
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
 $body-bg:                 $light-gray;
-$font-size-base: 18px;
+$font-size: 18px;
 
 // Colors
 $gray-base:       $gray;
@@ -50,4 +50,9 @@ $border-radius-small: 2px;
   display: block;
 }
 
+
 // Override other variables below!
+  // remove little arrow next to menu mobile icon
+  .dropdown-toggle::after {
+    display: none!important;
+  }
