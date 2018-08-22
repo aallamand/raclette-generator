@@ -1,37 +1,68 @@
-<h1>hey</h1>
-
-
-<form>
-  <div class="form-group">
-    <label for="customRange2">Nombre de personne</label>
-    <input type="range" class="custom-range" min="1" max="5" value="1" id="peopleRange">
-    <p id="value" >valeur : </p>
+<div class="container">
+  <div class="row questions">
+    <div class="offset-lg-3 col-lg-6">
+      <h1>Raclette Generator</h1>
+      <p>« Combien de fromage par personne pour une raclette ? »</p>
+      <p>« Quelle quantité de fromage pour une raclette de 5 personnes ? »</p>
+      <p>« Quelle quantité de cornichon nécessaire pour une raclette ? »</p>
+      <p>« Quel fromage acheter pour une raclette ? »</p>
+      <p>« Quantité de charcuterie par personne pour une raclette ? »</p>
+      <p>« Combien de patates par personne pour une raclette ? »</p>
+      <p>« Quelle quantité par personne pour une raclette ? »</p>
+      <h3>
+        Autant de questions existentielles qui restaient sans réponses...
+        Heureusement Raclette Generator t'aide à ne pas rester sur la paille
+        face à ces questionss
+      </h3>
+    </div>
   </div>
-</form>
+  <form>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-lg-3">
+          <label for="customRange2">Nombre de Végans <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="Qui ne mangent pas de produits d'origine animale"></i></label>
+          <input type="range" class="custom-range" min="1" max="25" value="1" id="veganRange" name="veganRange" oninput="this.form.veganInput.value=this.value">
+          <input type="number" name="veganInput" min="1" max="25" value="1" oninput="this.form.veganRange.value=this.value" />
+        </div>
+        <div class="col-lg-3">
+          <label for="customRange2">Nombre de Végétarien <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="Qui ne mangent pas de viande"></i></label>
+          <input type="range" class="custom-range" min="1" max="25" value="1" id="veggieRange" name="veggieRange" oninput="this.form.veggieInput.value=this.value">
+          <input type="number" name="veggieInput" min="1" max="25" value="1" oninput="this.form.veggieRange.value=this.value" />
+        </div>
+        <div class="col-lg-3">
+          <label for="customRange2">Nombre d'Omnivore <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="Qui mangent des légumineuses, de la viande et des produits d'origine animale"></i></label>
+          <input type="range" class="custom-range" min="1" max="25" value="1" id="omniRange" name="omniRange" oninput="this.form.omniInput.value=this.value">
+          <input type="number" name="omniInput" min="1" max="25" value="1" oninput="this.form.omniRange.value=this.value" />
+        </div>
+        <div class="col-lg-3">
+          <label for="customRange2">Nombre de Viandards <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="Qui mangent beaucoup de viande au cours d'un repas "></i></label>
+          <input type="range" class="custom-range" min="1" max="25" value="1" id="viandardRange" name="viandardRange" oninput="this.form.viandardInput.value=this.value">
+          <input type="number" name="viandardInput" min="1" max="25" value=1" oninput="this.form.viandardRange.value=this.value" />        </div>
+      </div>
+    </div>
+  </form>
+  <div class="solution">
+    <h3>Pour X personnes il vous faudra : </h3>
+    <p> X unité de fromages </p>
+    <p> X unité de charcuteries </p>
+    <p> X unité de patates </p>
+    <p> X unité de cornichons </p>
+    <p> Si vos convives boivent du vin, prévoyez x bouteilles de vin </p>
+  </div>
+
+  <div class="recette">
+    <h3>Bien préparer une raclette | La recette : </h3>
+    <p>
+      Faire cuire les patates à l'eau pendant 30-40 min ou bien à la cocotte pendant 15 min
+      Plantez un couteau dedans pour vérifier la cuisson, s'il s'enfonce bien alors les patates sont cuites.
+    </p>
+    <p>Préparer la charcuterie sur une assiètes</p>
+    <p>Couper le fromage et placez le sur une assiète ou un plat</p>
+    <p>Sortez les cornichons</p>
+    <p>Débouchez une bonne bouteille de blanc !</p>
+    <p>10-15 min avant de manger, préchauffez votre appareil</p>
+    <p>Bon appétit ! </p>
+  </div>
+</div>
 
 
-<script>
-  function defaultValue (id) {
-    const inputRange = document.getElementById(id);
-    let value = inputRange.value;
-    const valueHTML = document.getElementById("value");
-    valueHTML.innerHTML = `Valeur : ${value}`;
-  }
-
-  function valueForm (element){
-    let value = element.value;
-    const valueHTML = document.getElementById("value");
-    valueHTML.innerHTML = `Valeur : ${value}`;
-  }
-  function rangeEvent(id) {
-    const inputRange = document.getElementById(id);
-    inputRange.addEventListener("input", (event) => {
-      valueForm (inputRange);
-   });
-  }
-  window.onload = function(){
-    defaultValue('peopleRange');
-    rangeEvent('peopleRange');
-  };
-
-</script>

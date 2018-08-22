@@ -8,3 +8,11 @@
 // layout file, like app/views/layouts/application.html.erb
 
 console.log('Hello World from Webpacker')
+
+
+// Launch Tooltip code on Home and everywhere else
+$( document ).ready(function() {
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+  });
