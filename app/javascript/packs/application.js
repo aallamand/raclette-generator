@@ -9,6 +9,9 @@
 
 console.log('Hello World from Webpacker')
 
+import { computeRaclette } from "../components/compute";
+computeRaclette(".custom-range");
+computeRaclette(".custom-selector");
 
 // Launch Tooltip code on Home and everywhere else
 $( document ).ready(function() {

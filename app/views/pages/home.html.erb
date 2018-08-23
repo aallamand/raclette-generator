@@ -22,22 +22,23 @@
         <div class="col-lg-3">
           <label for="customRange2">Nombre de Végans <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="Qui ne mangent pas de produits d'origine animale"></i></label>
           <input type="range" class="custom-range" min="1" max="25" value="1" id="veganRange" name="veganRange" oninput="this.form.veganInput.value=this.value">
-          <input type="number" name="veganInput" min="1" max="25" value="1" oninput="this.form.veganRange.value=this.value" />
+          <input type="number" class="custom-selector" id="veganSelector" name="veganInput" min="1" max="25" value="1" oninput="this.form.veganRange.value=this.value" />
         </div>
         <div class="col-lg-3">
           <label for="customRange2">Nombre de Végétarien <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="Qui ne mangent pas de viande"></i></label>
           <input type="range" class="custom-range" min="1" max="25" value="1" id="veggieRange" name="veggieRange" oninput="this.form.veggieInput.value=this.value">
-          <input type="number" name="veggieInput" min="1" max="25" value="1" oninput="this.form.veggieRange.value=this.value" />
+          <input type="number" class="custom-selector" id="veggieSelector" name="veggieInput" min="1" max="25" value="1" oninput="this.form.veggieRange.value=this.value" />
         </div>
         <div class="col-lg-3">
           <label for="customRange2">Nombre d'Omnivore <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="Qui mangent des légumineuses, de la viande et des produits d'origine animale"></i></label>
           <input type="range" class="custom-range" min="1" max="25" value="1" id="omniRange" name="omniRange" oninput="this.form.omniInput.value=this.value">
-          <input type="number" name="omniInput" min="1" max="25" value="1" oninput="this.form.omniRange.value=this.value" />
+          <input type="number" class="custom-selector" id="omniSelector" name="omniInput" min="1" max="25" value="1" oninput="this.form.omniRange.value=this.value" />
         </div>
         <div class="col-lg-3">
           <label for="customRange2">Nombre de Viandards <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="Qui mangent beaucoup de viande au cours d'un repas "></i></label>
           <input type="range" class="custom-range" min="1" max="25" value="1" id="viandardRange" name="viandardRange" oninput="this.form.viandardInput.value=this.value">
-          <input type="number" name="viandardInput" min="1" max="25" value=1" oninput="this.form.viandardRange.value=this.value" />        </div>
+          <input type="number" class="custom-selector" id="viandardSelector" name="viandardInput" min="1" max="25" value="1" oninput="this.form.viandardRange.value=this.value" />
+        </div>
       </div>
     </div>
   </form>
